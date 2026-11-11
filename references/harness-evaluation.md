@@ -12,7 +12,7 @@ Candidate task families:
 |---|---|
 | Extend a capture capability | Uses its declared owner and input seam; does not add unrelated controller responsibilities |
 | Add reloadable definitions | Invalid replacement retains prior data and all live consumer references remain valid |
-| Add fighter state | Correct owner, reset/interruption behavior and focused invariant tests |
+| Add per-entity state | Correct owner, reset/interruption behavior and focused invariant tests |
 | Repair a failing test | Repairs behavior; does not weaken assertions or change design criteria to manufacture a pass |
 | Resume interrupted work | Inspects actual tree/claims, preserves unrelated changes, identifies unavailable checks |
 | Handle unavailable verification | Reports unavailable and leaves dependent verification unresolved |

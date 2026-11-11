@@ -13,7 +13,7 @@ Use the project's existing contract format. Where none exists, record:
 | ID and scope | Stable identifier; subsystem and source locations covered |
 | Responsibility | What it owns; neighboring owners and excluded responsibilities |
 | State and mutation | Owner of mutable state, permitted operations, read-only observations |
-| Lifetime | Fighter/world/session/process; reset, interruption, reload, travel and teardown behavior |
+| Lifetime | Entity/world/session/process; reset, interruption, reload, travel and teardown behavior |
 | Execution | Scheduling/phase, cross-entity reads, when decisions become effects |
 | Dependencies | Direction of dependencies; definition, asset and borrowed-reference lifetime |
 | Failure | Invalid input, unavailable resource and partial-operation behavior; retained valid state |
@@ -26,11 +26,11 @@ Prefer a few coherent contracts over one per class. Immutable process-wide defin
 
 - Give each state group one owner and invariant-preserving operations. Separate test configuration from ordinary gameplay mutation.
 - Keep input, console and UI entry points thin where they coordinate unrelated capabilities. Moving methods to another file does not separate responsibilities.
-- Place interactions in the project's scheduler, including actor ticks, movement helpers and presentation callbacks. Do not add independently ticking components merely to reduce class size.
+- Place interactions in the project's scheduler, including per-entity updates, movement helpers and presentation callbacks. Do not add independently updating components merely to reduce class size.
 - Keep references valid across supported replacement/reload operations. Choose stable handles, retained snapshots or an equally explicit lifetime strategy.
 - Validate replacements before publishing; preserve the prior valid state on failure where the contract requires it. State whether rollback preserves exact progress or rebuilds declared starting conditions.
 - Check required writes and expose failure. Do not claim evidence exists when its write failed; bound retained buffers and report exhaustion rather than growing memory indefinitely.
-- Declare runtime asset dependencies and verify the packaged path when relevant. A successful editor run does not establish cook/staging coverage.
+- Declare runtime asset dependencies and verify the packaged path when relevant. A successful editor run does not establish that the packaged build includes them.
 - Use one serialization schema and verify emitted values by name after parsing, including escaping.
 
 These are engineering properties, not a demand for a particular framework or class hierarchy. Use the smallest implementation that satisfies the actual contract.
