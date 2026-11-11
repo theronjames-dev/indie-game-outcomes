@@ -1,0 +1,5 @@
+# Local-only material: private project records and packaged builds
+_private/
+*.zip
+.DS_Store
+Thumbs.db

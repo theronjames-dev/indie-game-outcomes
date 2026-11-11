@@ -1,0 +1,4 @@
+interface:
+  display_name: "Indie Game Outcomes"
+  short_description: "Plan experiments, tune settled designs, and evaluate game outcomes"
+  default_prompt: "Use $indie-game-outcomes to turn my game idea into a focused playable experiment and an AI implementation brief."
