@@ -4,6 +4,8 @@ A lightweight AI skill for indie developers who want playable experiments to ans
 
 Use it to decide what to prototype, brief an AI coding assistant, interpret playtests, and connect implementation work to an intended player experience. It supports solo developers and small teams, across engines and genres. No scripts, paid services, or engine integrations are required.
 
+<img src="assets/agentic-flow-indie-games.png" alt="Agentic Flow for indie games: pick the mode, let the agent build, keep the builder away from the grade" width="540">
+
 ## What it does
 
 - Turns a feature idea into a bounded experiment and a keep/change/cut decision.
